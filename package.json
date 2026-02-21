@@ -1,0 +1,8 @@
+{
+  "name": "mcp-hackathon-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix forge-os install && npm --prefix forge-os run build",
+    "start": "npm --prefix forge-os run start"
+  }
+}
