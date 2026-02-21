@@ -5,6 +5,7 @@
     "forge-os"
   ],
   "scripts": {
+    "postinstall": "mkdir -p node_modules/.keep",
     "build": "npm run build --workspace forge-os",
     "start": "npm run start --workspace forge-os"
   }
