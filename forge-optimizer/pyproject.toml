@@ -1,0 +1,16 @@
+[project]
+name = "forge-optimizer"
+version = "0.1.0"
+description = "In-memory Optuna MCP optimizer"
+requires-python = ">=3.11"
+dependencies = [
+  "mcp-use==1.6.0",
+  "optuna==4.3.0"
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["optimizer_server"]

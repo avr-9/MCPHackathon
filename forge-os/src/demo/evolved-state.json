@@ -1,0 +1,128 @@
+{
+  "apps": [
+    {
+      "id": "slack",
+      "name": "Slack",
+      "icon": "S",
+      "kind": "native",
+      "ring": "green",
+      "badges": [],
+      "toolNames": ["search_messages", "list_channels"],
+      "createdAt": "2026-02-21T12:00:00.000Z"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "icon": "G",
+      "kind": "native",
+      "ring": "green",
+      "badges": [],
+      "toolNames": ["list_prs", "list_issues"],
+      "createdAt": "2026-02-21T12:00:00.000Z"
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "icon": "C",
+      "kind": "native",
+      "ring": "green",
+      "badges": [],
+      "toolNames": ["today_events", "next_meetings"],
+      "createdAt": "2026-02-21T12:00:00.000Z"
+    },
+    {
+      "id": "admin-panel",
+      "name": "Admin Panel",
+      "icon": "A",
+      "kind": "endpointified",
+      "ring": "green",
+      "badges": ["web"],
+      "toolNames": ["search_tickets", "filter_by_status", "create_ticket"],
+      "createdAt": "2026-02-21T12:01:00.000Z"
+    },
+    {
+      "id": "team-pulse",
+      "name": "Team Pulse",
+      "icon": "P",
+      "kind": "composite",
+      "ring": "blue",
+      "badges": ["new"],
+      "toolNames": ["team_pulse_summary"],
+      "createdAt": "2026-02-21T12:02:00.000Z"
+    }
+  ],
+  "activity": [
+    {
+      "id": "act_e1",
+      "kind": "composite_accepted",
+      "title": "Composite Accepted",
+      "detail": "team-pulse is now active",
+      "timestamp": "2026-02-21T12:02:30.000Z"
+    },
+    {
+      "id": "act_e2",
+      "kind": "optimized",
+      "title": "Tool Optimized",
+      "detail": "Slack search improved by 45%",
+      "timestamp": "2026-02-21T12:02:00.000Z"
+    },
+    {
+      "id": "act_e3",
+      "kind": "endpointified",
+      "title": "New App Generated",
+      "detail": "Admin Panel generated with 7 tools",
+      "timestamp": "2026-02-21T12:01:00.000Z"
+    }
+  ],
+  "composites": [
+    {
+      "id": "team-pulse",
+      "name": "team-pulse",
+      "chain": ["slack.search_messages", "github.list_prs", "calendar.today_events"],
+      "estimate": "4x faster",
+      "status": "accepted",
+      "createdAt": "2026-02-21T12:02:20.000Z"
+    }
+  ],
+  "trialProposals": [
+    {
+      "trialId": "t_042",
+      "serverId": "slack",
+      "candidateParams": {
+        "description_version": "v3",
+        "retry": "exponential"
+      },
+      "baselineSummary": "8.2s, relevance 6/10",
+      "candidateSummary": "1.9s, relevance 9/10",
+      "createdAt": "2026-02-21T12:01:55.000Z",
+      "state": "accepted"
+    }
+  ],
+  "routes": [
+    {
+      "id": "route_demo",
+      "message": "Prep me for standup",
+      "appPath": ["slack", "github", "admin-panel", "calendar", "team-pulse"],
+      "metrics": {
+        "latencyMs": 2044,
+        "toolCalls": 5,
+        "qualityScore": 9.3
+      },
+      "panels": [
+        {
+          "id": "panel_1",
+          "title": "Engineering Updates",
+          "appId": "team-pulse",
+          "lines": ["3 PRs merged", "2 blockers", "1 critical ticket"]
+        }
+      ],
+      "createdAt": "2026-02-21T12:03:00.000Z"
+    }
+  ],
+  "stats": {
+    "optimizations": 47,
+    "speedGainPct": 340,
+    "newApps": 3,
+    "endpointified": 2
+  }
+}
