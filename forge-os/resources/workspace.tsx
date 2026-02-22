@@ -94,6 +94,26 @@ export default function WorkspaceWidget() {
 
       <section className="workspace-grid">
         <div className="left-stage">
+          <div className="desktop-stage">
+            <div className="status-strip">
+              <span>{new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}</span>
+              <span className="status-icons">wifi ▰</span>
+            </div>
+            <div className="home-grid">
+              {workspace.apps.map((app) => (
+                <button
+                  type="button"
+                  key={`home_${app.id}`}
+                  className={`home-icon-tile ring-${app.ring} ${selectedAppId === app.id ? "active" : ""}`}
+                  onClick={() => setSelectedAppId(app.id)}
+                >
+                  <span className="home-icon">{app.icon}</span>
+                  <span className="home-label">{app.name}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="controls-row">
             <input
               value={urlInput}
