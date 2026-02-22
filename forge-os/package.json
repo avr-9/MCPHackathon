@@ -7,7 +7,8 @@
     "dev": "NODE_OPTIONS=--max-old-space-size=8192 mcp-use dev --port 3000",
     "build": "NODE_OPTIONS=--max-old-space-size=8192 mcp-use build",
     "start": "NODE_OPTIONS=--max-old-space-size=8192 mcp-use start --port 3000",
-    "deploy": "NODE_OPTIONS=--max-old-space-size=8192 mcp-use deploy --name forge-os"
+    "deploy": "NODE_OPTIONS=--max-old-space-size=8192 mcp-use deploy --name forge-os",
+    "start:optimizer-node": "node optimizer-node/index.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0",

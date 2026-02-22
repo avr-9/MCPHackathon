@@ -7,6 +7,8 @@
   "scripts": {
     "postinstall": "mkdir -p node_modules/.keep",
     "build": "npm run build --workspace forge-os",
-    "start": "npm run start --workspace forge-os"
+    "start": "npm run start --workspace forge-os",
+    "build:optimizer-node": "npm --prefix forge-optimizer-node install",
+    "start:optimizer-node": "npm --prefix forge-optimizer-node run start"
   }
 }

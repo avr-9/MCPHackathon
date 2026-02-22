@@ -6,6 +6,7 @@ Two-server MCP demo stack built for fast live reliability.
 
 - `forge-os` (TypeScript): main MCP App with widget + endpointify + routing + optimization/composite UX.
 - `forge-optimizer` (Python): Optuna MCP server with in-memory studies.
+- `forge-optimizer-node` (Node): Node-only fallback optimizer server for environments that cannot run Python.
 
 ## Local Run
 
